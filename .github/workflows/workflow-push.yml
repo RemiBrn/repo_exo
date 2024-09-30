@@ -1,26 +1,3 @@
-name : Workflow lors d'un push
-on: push
-jobs:
-  # Définition de la première action à réaliser
-  premier-job:
-    # On précise le système d'exploitation (runner)
-    runs-on: ubuntu-latest
-
-    # On écrit ici les étapes de notre action
-    steps:
-      - name: Récupération de notre application
-        uses: actions/checkout@v4      
-
-      - name: installation des dépendances 
-        run: npm install
-
-      - name: build de l'application
-        run: npm run build
-
-      - name: test
-        run: npm run test
-
-
 name: Spring Boot Application
 
 # Ce workflow s'exécute lors d'un push
