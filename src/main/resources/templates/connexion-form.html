@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+    <span th:replace="~{home :: bootstrapImport}"></span>
+</head>
+<body>
+<span th:replace="~{home :: navbar}"></span>
+<div class="container">
+    <h2>Connexion</h2>
+    <form th:action="@{/login}" method="post" >
+        <input type="text" name="username" placeholder="username" >
+        <input type="password" name="password" placeholder="password">
+        <button class="btn btn-success">Connexion</button>
+    </form>
+</div>
+</body>
+</html>
